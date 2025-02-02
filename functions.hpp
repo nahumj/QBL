@@ -59,7 +59,7 @@ static inline emp::String LineToRawText(emp::String line) {
       case '\\': out_line += c; break;
       case 'n': out_line += "\\\\ "; break;
       default:
-        std::cerr << "Error: Unknown escape character '" << c << "'.\n" << std::endl;
+        std::cerr << "Error (101): Unknown escape character '" << c << "'.\n" << std::endl;
         exit(1);
       }
       start_scan = false;
@@ -107,9 +107,9 @@ static inline emp::String LineToD2L(emp::String line) {
       case '&': out_line += c; scan_to = ';'; break;
       case '<': out_line += c; scan_to = '>'; break;
       case '\\': out_line += c; break;
-      case '\n': out_line += "<br>"; break;
+      case 'n': out_line += "<br>"; break;
       default:
-        std::cerr << "Error: Unknown escape character '" << c << "'.\n" << std::endl;
+        std::cerr << "Error (102): Unknown escape character '" << c << "'.\n" << std::endl;
         exit(1);
       }
       start_scan = false;
@@ -228,7 +228,7 @@ static inline emp::String LineToLatex(emp::String line) {
       case '\\': out_line += c; break;
       case 'n': out_line += "\\\\ "; break;
       default:
-        std::cerr << "Error: Unknown escape character '" << c << "'.\n" << std::endl;
+        std::cerr << "Error (103): Unknown escape character '" << c << "'.\n" << std::endl;
         exit(1);
       }
       start_scan = false;
@@ -309,7 +309,7 @@ static inline emp::String LineToHTML(emp::String line) {
       case '\\': out_line += c; break;
       case 'n': out_line += "<br>"; break;
       default:
-        std::cerr << "Error: Unknown escape character '" << c << "'.\n" << std::endl;
+        std::cerr << "Error (104): Unknown escape character '" << c << "'.\n" << std::endl;
         exit(1);
       }
       start_scan = false;

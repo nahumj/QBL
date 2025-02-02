@@ -178,7 +178,7 @@ void Question_MultipleChoice::Validate() {
 void Question_MultipleChoice::ReduceOptions(emp::Random& random, size_t correct_target,
                              size_t incorrect_target) {
   emp_assert(correct_target <= CountCorrect());
-  emp_assert(incorrect_target <= CountIncorrect());
+  emp_assert(incorrect_target <= CountIncorrect(), incorrect_target, CountIncorrect(), question);
 
   // Pick the set of options to use.
   emp::BitVector used(options.size());
