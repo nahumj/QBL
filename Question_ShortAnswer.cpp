@@ -32,7 +32,7 @@ void Question_ShortAnswer::PrintGradeScope(std::ostream& os, size_t q_num, bool 
   os << "% QUESTION ID " << id << "\n"
      << "\\noindent\\begin{minipage}{\\linewidth}\n"
      << "\\vspace{20pt}\\hangpara{1.8em}{1}\n"
-     << q_num << ". " << TextToLatex(question);
+     << q_num << ". " << TextToLatex(question) << "\n";
 
   os << "\\framebox(100,30){}\n"; // Blank answer box.
 
