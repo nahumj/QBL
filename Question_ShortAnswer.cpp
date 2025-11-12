@@ -34,7 +34,7 @@ void Question_ShortAnswer::PrintGradeScope(std::ostream& os, size_t q_num, bool 
      << "\\vspace{20pt}\\hangpara{1.8em}{1}\n"
      << q_num << ". " << TextToLatex(question);
 
-  os << "\framebox(100,30){}\n"; // Blank answer box.
+  os << "\\framebox(100,30){}\n"; // Blank answer box.
 
   for (const String & option : answers) {
     os << "% Answer:" << option << '\n';
