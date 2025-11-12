@@ -333,7 +333,7 @@ public:
     << "  let userAnswers = {};\n"
     << "  for (let key in correctAnswers) {\n"
     << "    let selectedAnswer = document.querySelector(`input[name=\"${key}\"]:checked`);\n"
-    << "    userAnswers[key] = selectedAnswer ? selectedAnswer.value : \"\";\n"
+    << "    userAnswers[key] = selectedAnswer ? document.querySelector(`#${key}`).value : \"\";\n"
     << "  }\n"
     << "\n"
     << "  let score = 0;\n"
